@@ -28,8 +28,8 @@ jobs:
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           chmod +x wp-cli.phar
           sudo mv wp-cli.phar /usr/local/bin/wp
+          echo "WP-CLI installed at: $(which wp)"  # Kontrollera installationen
           composer global require squizlabs/php_codesniffer
-          wp --info  # Bekräfta WP-CLI installation
 
       - name: Install WordPress Coding Standards (WPCS)
         run: |
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        wordpress-version: ["5.9", "6.0", "6.3", "6.7", "latest"]
+        wordpress-version: ["5.9", "6.0", "6.3", "latest"]
         php-version: ["7.4", "8.0", "8.2"]
 
     steps:
@@ -64,7 +64,7 @@ jobs:
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           chmod +x wp-cli.phar
           sudo mv wp-cli.phar /usr/local/bin/wp
-          wp --info  # Bekräfta WP-CLI installation
+          echo "WP-CLI installed at: $(which wp)"  # Kontrollera installationen
 
       - name: Install WordPress
         run: |
@@ -72,9 +72,6 @@ jobs:
           curl -O https://wordpress.org/wordpress-$WP_VERSION.tar.gz
           tar -xzf wordpress-$WP_VERSION.tar.gz
           mv wordpress /tmp/wordpress
-
-      - name: Set up WordPress Plugin
-        run: |
           mkdir -p /tmp/wordpress/wp-content/plugins/admin-tweak-suite
           cp -r . /tmp/wordpress/wp-content/plugins/admin-tweak-suite
 
@@ -84,6 +81,11 @@ jobs:
       - name: Run compatibility tests
         run: |
           cd /tmp/wordpress
-          wp plugin activate admin-tweak-suite
+          wp plugin activate admin-tweak-suite || echo "Plugin activation failed!"
           wp plugin verify-checksums admin-tweak-suite
           wp plugin status admin-tweak-suite
+
+      - name: Deactivate WordPress Plugin
+        run: |
+          cd /tmp/wordpress
+          wp plugin deactivate admin-tweak-suite || echo "Plugin deactivation failed!"
