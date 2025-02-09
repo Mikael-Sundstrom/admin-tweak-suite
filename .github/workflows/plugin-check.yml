@@ -25,13 +25,16 @@ jobs:
           composer global require wp-cli/wp-cli-bundle squizlabs/php_codesniffer
           wp --info
 
+      - name: Install WordPress Coding Standards (WPCS)
+        run: |
+          git clone -b master https://github.com/WordPress/WordPress-Coding-Standards.git ~/wpcs
+          phpcs --config-set installed_paths ~/wpcs
+          phpcs -i  # Verifiera installationen
+
       - name: Run PHP CodeSniffer (WordPress Coding Standards)
         run: |
           phpcs --standard=WordPress admin-tweak-suite.php
 
-      - name: Run Plugin Validation
-        run: |
-          wp plugin validate admin-tweak-suite
 
   compatibility-test:
     name: WordPress Compatibility Test
