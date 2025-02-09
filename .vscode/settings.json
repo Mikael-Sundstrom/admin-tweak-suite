@@ -1,0 +1,14 @@
+{
+	"files.exclude": {
+		".git": false,
+		".github": false,
+		".dockerignore": false,
+		".gitignore": false,
+		".vscode": false,
+		"github": false,
+		"wp-content": false,
+		"readme.txt": false,
+		"docker-compose.yml": false,
+	},
+	"workbench.sideBar.location": "left"
+}

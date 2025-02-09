@@ -1,0 +1,100 @@
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+
+      - name: Run PHP syntax check (lint)
+        run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
+
+      - name: Start WordPress with Docker
+        run: |
+          docker-compose up -d
+          sleep 20
+
+      - name: Run PHPUnit tests
+        run: |
+          docker exec wordpress-container wp plugin activate admin-tweak-suite
+          docker exec wordpress-container phpunit --configuration phpunit.xml
+
+  deploy:
+    name: Deploy to WordPress.org
+    needs: test  # Körs endast om testerna passerar!
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate version
+        run: |
+          VERSION="${GITHUB_REF#refs/tags/}"
+          if [[ -z "$VERSION" ]]; then
+            echo "Error: VERSION is empty!"
+            exit 1
+          fi
+
+      - name: Set up SVN credentials
+        env:
+          SVN_USERNAME: ${{ secrets.WORDPRESS_SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.WORDPRESS_SVN_PASSWORD }}
+        run: |
+          SVN_REPO="https://plugins.svn.wordpress.org/admin-tweak-suite/"
+
+          # Ta bort tidigare SVN-katalog om den finns
+          rm -rf svn-repo
+
+          # Hämta SVN-repot från WordPress.org
+          svn checkout --depth immediates "$SVN_REPO" svn-repo
+          cd svn-repo
+          svn update --set-depth infinity trunk tags
+
+      - name: Copy plugin files to SVN trunk
+        run: |
+          rsync -av \
+            --exclude=".git*" \
+            --exclude=".github/" \
+            --exclude=".gitignore" \
+            --exclude=".vscode/" \
+            --exclude="wp-content/" \
+            --exclude="docker-compose.yml" \
+            --exclude="github/" \
+            --exclude="README.md" \
+            --exclude="tests/" \
+            --exclude="phpunit.xml*" \
+            ../ svn-repo/trunk/
+
+      - name: Prepare SVN commit
+        run: |
+          cd svn-repo
+          
+          # Lägg till nya filer och ta bort gamla
+          svn add --force trunk/
+          svn delete $(svn status | awk '/^\!/ {print $2}') || true
+
+          # Skapa en ny tagg för versionen
+          cp -r trunk tags/$VERSION
+          svn add tags/$VERSION || true
+
+      - name: Commit to WordPress.org SVN
+        env:
+          SVN_USERNAME: ${{ secrets.WORDPRESS_SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.WORDPRESS_SVN_PASSWORD }}
+        run: |
+          cd svn-repo
+          echo "$SVN_PASSWORD" | svn commit --username "$SVN_USERNAME" --password-from-stdin -m "Release version $VERSION"

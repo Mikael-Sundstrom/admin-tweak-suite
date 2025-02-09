@@ -1,0 +1,55 @@
+#menu-list tr:first-child td {
+	border-top-width: 0;
+}
+
+#menu-list tr:last-child td {
+	border-bottom-width: 0;
+}
+
+#menu-list tr td {
+	vertical-align: middle;
+	border-top: 1px dashed #ddd;
+	border-bottom: 1px dashed #ddd;
+}
+
+tr td:last-child,
+tr th:last-child {
+	display: none;
+}
+
+thead tr th {
+	font-weight: bold !important;
+}
+
+#menu-list tr {
+	cursor: grab;
+}
+
+#menu-list tr:active {
+	cursor: grabbing;
+}
+
+.drag-handle {
+	width: 20px;
+	text-align: center;
+	cursor: grab;
+	font-size: 16px;
+	color: #555;
+}
+
+.drag-handle:hover {
+	color: #000;
+}
+
+.drag-handle-column {
+	width: 30px;
+}
+
+.button-wrapper form {
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.button-wrapper form:last-child {
+	margin-right: 0;
+}

@@ -1,0 +1,48 @@
+version: '3.9'
+
+services:
+  wordpress:
+    image: wordpress:php8.1-apache
+    container_name: wp_dev
+    restart: always
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: root
+      WORDPRESS_DB_NAME: wordpress
+      WORDPRESS_DEBUG: "1" # Activate debug mode
+    volumes:
+      - ./wp-content:/var/www/html/wp-content # Mount the wp-content folder to the container
+      - ./admin-tweak-suite.php:/var/www/html/wp-content/plugins/admin-tweak-suite/admin-tweak-suite.php
+      - ./readme.txt:/var/www/html/wp-content/plugins/admin-tweak-suite/readme.txt
+      - ./includes:/var/www/html/wp-content/plugins/admin-tweak-suite/includes
+      - ./admin:/var/www/html/wp-content/plugins/admin-tweak-suite/admin
+      - ./assets:/var/www/html/wp-content/plugins/admin-tweak-suite/assets
+      - ./languages:/var/www/html/wp-content/plugins/admin-tweak-suite/languages
+
+  db:
+    image: mariadb:latest
+    container_name: wp_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: wp_phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: root
+    depends_on:
+      - db
+
+volumes:
+  db_data:

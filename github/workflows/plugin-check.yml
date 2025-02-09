@@ -1,0 +1,56 @@
+name: WordPress Plugin Check & Compatibility Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  plugin-check:
+    name: Run Plugin Check
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.1"
+
+      - name: Install WP-CLI and PHPCS
+        run: |
+          composer global require wp-cli/wp-cli-bundle squizlabs/php_codesniffer
+          wp --info
+
+      - name: Run PHP CodeSniffer (WordPress Coding Standards)
+        run: |
+          phpcs --standard=WordPress admin-tweak-suite.php
+
+      - name: Run Plugin Validation
+        run: |
+          wp plugin validate admin-tweak-suite
+
+  compatibility-test:
+    name: WordPress Compatibility Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        wordpress-version: ["5.9", "6.0", "6.1", "6.2", "6.3", "6.7", "latest", "nightly"]
+        php-version: ["7.4", "8.0", "8.1", "8.2"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Start WordPress with Docker
+        run: |
+          docker-compose up -d
+          sleep 20
+
+      - name: Run PHPUnit tests
+        run: |
+          docker exec wordpress-container wp plugin activate admin-tweak-suite
+          docker exec wordpress-container phpunit --configuration phpunit.xml
