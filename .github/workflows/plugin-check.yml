@@ -28,8 +28,8 @@ jobs:
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           chmod +x wp-cli.phar
           sudo mv wp-cli.phar /usr/local/bin/wp
-          echo "WP-CLI installed at: $(which wp)"  # Kontrollera installationen
           composer global require squizlabs/php_codesniffer
+          wp --info  # Kontrollera WP-CLI installation
 
       - name: Install WordPress Coding Standards (WPCS)
         run: |
@@ -64,7 +64,7 @@ jobs:
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           chmod +x wp-cli.phar
           sudo mv wp-cli.phar /usr/local/bin/wp
-          echo "WP-CLI installed at: $(which wp)"  # Kontrollera installationen
+          wp --info  # Kontrollera installationen
 
       - name: Install WordPress
         run: |
@@ -75,17 +75,23 @@ jobs:
           mkdir -p /tmp/wordpress/wp-content/plugins/admin-tweak-suite
           cp -r . /tmp/wordpress/wp-content/plugins/admin-tweak-suite
 
+      - name: Configure WordPress
+        run: |
+          cd /tmp/wordpress
+          wp config create --dbname=wordpress --dbuser=root --dbpass=root --dbhost=localhost --path=/tmp/wordpress
+          wp core install --url="http://localhost" --title="Test Site" --admin_user="admin" --admin_password="password" --admin_email="admin@example.com" --path=/tmp/wordpress
+
       - name: Validate PHP syntax
         run: find /tmp/wordpress/wp-content/plugins/admin-tweak-suite -name "*.php" -print0 | xargs -0 -n1 php -l
 
       - name: Run compatibility tests
         run: |
           cd /tmp/wordpress
-          wp plugin activate admin-tweak-suite || echo "Plugin activation failed!"
+          wp plugin activate admin-tweak-suite
           wp plugin verify-checksums admin-tweak-suite
           wp plugin status admin-tweak-suite
 
       - name: Deactivate WordPress Plugin
         run: |
           cd /tmp/wordpress
-          wp plugin deactivate admin-tweak-suite || echo "Plugin deactivation failed!"
+          wp plugin deactivate admin-tweak-suite
