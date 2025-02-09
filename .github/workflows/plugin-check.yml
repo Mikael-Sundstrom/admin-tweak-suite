@@ -28,19 +28,19 @@ jobs:
           curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
           chmod +x wp-cli.phar
           sudo mv wp-cli.phar /usr/local/bin/wp
-          composer global require squizlabs/php_codesniffer
+          composer global require squizlabs/php_codesniffer phpcompatibility/php-compatibility
           wp --info  # Kontrollera WP-CLI installation
 
       - name: Install WordPress Coding Standards (WPCS)
         run: |
           git clone --depth=1 https://github.com/WordPress/WordPress-Coding-Standards.git ~/wpcs
-          phpcs --config-set installed_paths ~/wpcs
+          phpcs --config-set installed_paths ~/wpcs,$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility
           phpcs -i  # Verifiera installationen
 
       - name: Run PHP CodeSniffer (WordPress Coding Standards)
         run: |
           find . -name "*.php" -print0 | xargs -0 -n1 php -l  # Syntaxkontroll av alla PHP-filer
-          phpcs --standard=WordPress --ignore=vendor/* .
+          phpcs --standard=WordPress --ignore=vendor/* .  # Kontrollera kodstandard
 
   compatibility-test:
     name: WordPress Compatibility Test
@@ -49,22 +49,6 @@ jobs:
       matrix:
         wordpress-version: ["5.9", "6.0", "6.3", "latest"]
         php-version: ["7.4", "8.0", "8.2"]
-
-    services:
-      mysql:
-        image: mysql:5.7
-        env:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: wordpress
-          MYSQL_USER: wp
-          MYSQL_PASSWORD: wp
-        ports:
-          - 3306:3306
-        options: >-
-          --health-cmd="mysqladmin ping --host=localhost --user=root --password=root"
-          --health-interval=10s
-          --health-timeout=5s
-          --health-retries=5
 
     steps:
       - name: Checkout repository
@@ -88,17 +72,20 @@ jobs:
           curl -O https://wordpress.org/wordpress-$WP_VERSION.tar.gz
           tar -xzf wordpress-$WP_VERSION.tar.gz
           mv wordpress /tmp/wordpress
+  
+      - name: Start MySQL Database
+        run: |
+          sudo systemctl start mysql || sudo service mysql start
+          sudo mysql -e "CREATE DATABASE IF NOT EXISTS wordpress;"
+          sudo mysql -e "CREATE USER 'root'@'localhost' IDENTIFIED BY 'root';"
+          sudo mysql -e "GRANT ALL PRIVILEGES ON wordpress.* TO 'root'@'localhost';"
+          sudo mysql -e "FLUSH PRIVILEGES;"
 
       - name: Configure WordPress
         run: |
           cd /tmp/wordpress
-          wp config create --dbname=wordpress --dbuser=root --dbpass=root --dbhost=127.0.0.1 --path=/tmp/wordpress
+          wp config create --dbname=wordpress --dbuser=root --dbpass=root --dbhost=localhost --path=/tmp/wordpress
           wp core install --url="http://localhost" --title="Test Site" --admin_user="admin" --admin_password="password" --admin_email="admin@example.com" --path=/tmp/wordpress
-
-      - name: Set up WordPress Plugin
-        run: |
-          mkdir -p /tmp/wordpress/wp-content/plugins/admin-tweak-suite
-          cp -r . /tmp/wordpress/wp-content/plugins/admin-tweak-suite
 
       - name: Validate PHP syntax
         run: find /tmp/wordpress/wp-content/plugins/admin-tweak-suite -name "*.php" -print0 | xargs -0 -n1 php -l
