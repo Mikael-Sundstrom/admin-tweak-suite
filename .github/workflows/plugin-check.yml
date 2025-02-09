@@ -30,7 +30,7 @@ jobs:
 
       - name: Install WordPress Coding Standards (WPCS)
         run: |
-          git clone -b trunk https://github.com/WordPress/WordPress-Coding-Standards.git ~/wpcs
+          git clone --depth=1 https://github.com/WordPress/WordPress-Coding-Standards.git ~/wpcs
           phpcs --config-set installed_paths ~/wpcs
           phpcs -i  # Verifiera installationen
 
@@ -67,9 +67,12 @@ jobs:
           mkdir -p /tmp/wordpress/wp-content/plugins/admin-tweak-suite
           cp -r * /tmp/wordpress/wp-content/plugins/admin-tweak-suite
 
-      - name: Validate PHP syntax
-        run: php -l admin-tweak-suite.php
+      - name: Validate PHP syntax for all files
+        run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
 
-      - name: Run compatibility tests
+      - name: Run compatibility tests for entire plugin
         run: |
-          php /tmp/wordpress/wp-content/plugins/admin-tweak-suite/admin-tweak-suite.php
+          cd /tmp/wordpress
+          wp plugin activate admin-tweak-suite
+          wp plugin verify-checksums admin-tweak-suite
+          wp plugin status admin-tweak-suite
