@@ -46,7 +46,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
+		
       - name: Install Docker Compose
         run: |
           sudo apt-get update
@@ -56,6 +56,20 @@ jobs:
         run: |
           docker-compose up -d
           sleep 20
+          docker ps -a  # Lista alla containers för felsökning
+
+      - name: Wait for WordPress container to be ready
+        run: |
+          for i in {1..30}; do
+            if docker ps | grep wordpress-container; then
+              echo "WordPress container is running."
+              exit 0
+            fi
+            echo "Waiting for WordPress container to start..."
+            sleep 5
+          done
+          echo "Error: WordPress container did not start in time."
+          exit 1
 
       - name: Run PHPUnit tests
         run: |
