@@ -28,16 +28,22 @@ jobs:
 
       - name: Install PHP CodeSniffer & Compatibility Tools
         run: |
+          composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
           composer global require \
             squizlabs/php_codesniffer \
             phpcompatibility/php-compatibility \
             php-stubs/wordpress-stubs \
             dealerdirect/phpcodesniffer-composer-installer \
             php-parallel-lint/php-parallel-lint
-          
+
+          # Installera WordPress Coding Standards (WPCS)
           git clone --depth=1 https://github.com/WordPress/WordPress-Coding-Standards.git ~/wpcs
-          phpcs --config-set installed_paths ~/wpcs,$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility
-          phpcs -i  # Bekräfta att WordPress finns
+          
+          # Konfigurera PHPCS
+          phpcs --config-set installed_paths \
+            ~/wpcs,$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility
+          
+          phpcs -i  # Bekräfta att standarder är korrekt installerade
 
       - name: Run PHP Syntax Check
         run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
