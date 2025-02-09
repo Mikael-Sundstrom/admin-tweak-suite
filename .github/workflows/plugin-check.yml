@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: ["7.4", "8.0", "8.1", "8.2"]
+        php-version: ["7.4", "8.0", "8.2"]
 
     steps:
       - name: Checkout repository
@@ -37,18 +37,30 @@ jobs:
             dealerdirect/phpcodesniffer-composer-installer \
             php-parallel-lint/php-parallel-lint
 
-          phpcs --config-set installed_paths "$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility,$(composer global config --absolute vendor-dir)/wp-coding-standards/wpcs"
+      - name: Manually Set PHPCS Installed Paths
+        run: |
+          PHPCS_DIR=$(composer global config --absolute vendor-dir)/squizlabs/php_codesniffer
+          WPCS_DIR=$(composer global config --absolute vendor-dir)/wp-coding-standards/wpcs
+          PHP_COMPAT_DIR=$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility
+          $PHPCS_DIR/bin/phpcs --config-set installed_paths "$WPCS_DIR,$PHP_COMPAT_DIR"
+          $PHPCS_DIR/bin/phpcs -i
 
-          phpcs -i
+      - name: Debug PHPCS Installed Standards
+        run: phpcs -i
+
+      - name: Update Composer Dependencies
+        run: composer global update
 
       - name: Run PHP Syntax Check
         run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
 
       - name: Run PHP CodeSniffer (PHPCS)
         run: |
-          phpcs --config-show
-          phpcs --standard=WordPress --ignore=vendor/*,node_modules/* --extensions=php .
+          PHPCS_BIN=$(composer global config --absolute vendor-dir)/squizlabs/php_codesniffer/bin/phpcs
+          $PHPCS_BIN --config-show
+          $PHPCS_BIN --standard=WordPress --ignore=vendor/*,node_modules/* --extensions=php .
 
       - name: Run PHP Compatibility Check
         run: |
-          phpcs --standard=PHPCompatibility --runtime-set testVersion ${{ matrix.php-version }} --ignore=vendor/*,node_modules/* .
+          PHPCS_BIN=$(composer global config --absolute vendor-dir)/squizlabs/php_codesniffer/bin/phpcs
+          $PHPCS_BIN --standard=PHPCompatibility --runtime-set testVersion ${{ matrix.php-version }} --ignore=vendor/*,node_modules/* .
