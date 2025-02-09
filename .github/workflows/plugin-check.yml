@@ -35,7 +35,6 @@ jobs:
         run: |
           phpcs --standard=WordPress admin-tweak-suite.php
 
-
   compatibility-test:
     name: WordPress Compatibility Test
     runs-on: ubuntu-latest
@@ -47,6 +46,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Install Docker Compose
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y docker-compose
 
       - name: Start WordPress with Docker
         run: |
