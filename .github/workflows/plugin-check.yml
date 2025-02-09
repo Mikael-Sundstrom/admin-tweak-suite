@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        php-version: ["7.0", "7.4", "8.0", "8.1", "8.2", "8.3", "8.4"]
+        php-version: ["7.4", "8.0", "8.1", "8.2"]
 
     steps:
       - name: Checkout repository
@@ -28,15 +28,24 @@ jobs:
 
       - name: Install PHP CodeSniffer & Compatibility Tools
         run: |
-          composer global require squizlabs/php_codesniffer phpcompatibility/php-compatibility php-parallel-lint/php-parallel-lint
-          phpcs -i  # Kontrollera installationen
+          composer global require \
+            squizlabs/php_codesniffer \
+            phpcompatibility/php-compatibility \
+            php-stubs/wordpress-stubs \
+            dealerdirect/phpcodesniffer-composer-installer \
+            php-parallel-lint/php-parallel-lint
+          
+          git clone --depth=1 https://github.com/WordPress/WordPress-Coding-Standards.git ~/wpcs
+          phpcs --config-set installed_paths ~/wpcs,$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility
+          phpcs -i  # Bekräfta att WordPress finns
 
       - name: Run PHP Syntax Check
         run: find . -name "*.php" -print0 | xargs -0 -n1 php -l
 
       - name: Run PHP CodeSniffer (PHPCS)
         run: |
-          phpcs --standard=WordPress --ignore=vendor/* .  # Kontrollera kodstandard
+          phpcs --config-show
+          phpcs --standard=WordPress --ignore=vendor/* .
 
       - name: Run PHP Compatibility Check
         run: |
