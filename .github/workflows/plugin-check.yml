@@ -28,11 +28,7 @@ jobs:
 
       - name: Install PHP CodeSniffer & Compatibility Tools
         run: |
-          # Fix för Composer allow-plugins
           composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-          composer global config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-
-          # Installera verktyg
           composer global require \
             squizlabs/php_codesniffer \
             phpcompatibility/php-compatibility \
@@ -41,12 +37,8 @@ jobs:
             dealerdirect/phpcodesniffer-composer-installer \
             php-parallel-lint/php-parallel-lint
 
-          # Konfigurera PHPCS
-          phpcs --config-set installed_paths \
-            $(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility,\
-            $(composer global config --absolute vendor-dir)/wp-coding-standards/wpcs
+          phpcs --config-set installed_paths "$(composer global config --absolute vendor-dir)/phpcompatibility/php-compatibility,$(composer global config --absolute vendor-dir)/wp-coding-standards/wpcs"
 
-          # Bekräfta att standarder är korrekt installerade
           phpcs -i
 
       - name: Run PHP Syntax Check
