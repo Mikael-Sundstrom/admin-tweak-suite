@@ -1,0 +1,23 @@
+# OS/IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Node
+node_modules/
+npm-debug.log*
+package-lock.json
+
+# Composer
+vendor/
+composer.lock
+
+# Byggartefakter
+dist/
+build/
+*.zip
+
+# Miljö
+.env
