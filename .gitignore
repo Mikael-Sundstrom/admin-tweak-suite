@@ -1,23 +1,24 @@
-# OS/IDE
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
+# Versionshanterings- och utvecklingsfiler som inte behövs i Docker
+.git/
+
+# WordPress-specifika filer som inte ska med i SVN
+wp-content/
+
+# Tillfälliga och cachefiler
 *.log
+*.tmp
 
-# Node
+# Ignorera lokala miljöfiler (men låt exempel-filen ligga kvar)
+.env
+.env.local
+
+# Exkludera node_modules och Composer-kataloger om du använder dem
 node_modules/
-npm-debug.log*
-package-lock.json
-
-# Composer
 vendor/
 composer.lock
 
-# Byggartefakter
-dist/
-build/
-*.zip
+# WordPress-deployment-specifika filer (ska ej till SVN)
+phpunit.xml
+tests/
 
-# Miljö
-.env
+

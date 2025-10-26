@@ -1,0 +1,25 @@
+.atweaks-bmc {
+	background: url('../img/bmac-default-yellow.webp') no-repeat center center;
+	width: 150px;
+	height: 50px;
+	display: inline-block;
+	background-size: contain;
+}
+
+.atweaks-qr {
+	background: url('../img/BMC_QR.png') no-repeat center center;
+	width: 128px;
+	height: 128px;
+	display: block;
+	background-size: contain;
+}
+
+.atweaks-pp {
+	background: url('../img/paypal_black.svg') no-repeat center center;
+	display: inline-block;
+	background-size: contain;
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+	margin: 8px 8px 8px 4px;
+}

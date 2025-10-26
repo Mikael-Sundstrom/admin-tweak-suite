@@ -1,0 +1,643 @@
+# Copyright (C) 2025 Mikael Sundström
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Tweak Suite 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-tweak-suite\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-26T16:05:01+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: admin-tweak-suite\n"
+
+#. Plugin Name of the plugin
+#: admin-tweak-suite.php
+#: admin/admin-loader.php:17
+#: admin/admin-loader.php:18
+#: admin/admin-page.php:20
+msgid "Admin Tweak Suite"
+msgstr "Admin Tweak Suite"
+
+#. Plugin URI of the plugin
+#: admin-tweak-suite.php
+msgid "https://github.com/Mikael-Sundstrom/admin-tweak-suite"
+msgstr "https://github.com/Mikael-Sundstrom/admin-tweak-suite"
+
+#. Description of the plugin
+#: admin-tweak-suite.php
+msgid "Effortlessly clean up, optimize and customize your WordPress admin — menu order, CSS, scripts and dashboard tweaks in one lightweight toolkit."
+msgstr "WordPress एडमिन को आसानी से साफ़ करें, ऑप्टिमाइज़ करें और कस्टमाइज़ करें — मेन्यू क्रम, CSS, स्क्रिप्ट्स और डैशबोर्ड ट्वीक एक हल्के टूलकिट में।"
+
+#. Author of the plugin
+#: admin-tweak-suite.php
+msgid "Mikael Sundström"
+msgstr "मिकाएल सुंडस्ट्रॉम"
+
+#. Author URI of the plugin
+#: admin-tweak-suite.php
+msgid "https://github.com/Mikael-Sundstrom"
+msgstr "https://github.com/Mikael-Sundstrom"
+
+#: admin/admin-page.php:34
+msgid "Admin Menu"
+msgstr "एडमिन मेनू"
+
+#: admin/admin-page.php:35
+msgid "CSS"
+msgstr "CSS"
+
+#: admin/admin-page.php:36
+msgid "Scripts"
+msgstr "स्क्रिप्ट्स"
+
+#: admin/admin-page.php:37
+msgid "Extra Tweaks"
+msgstr "अतिरिक्त समायोजन"
+
+#: admin/admin-page.php:38
+msgid "About"
+msgstr "के बारे में"
+
+#: admin/admin-page.php:86
+msgid "Invalid tab. Please select a valid tab."
+msgstr "अमान्य टैब। कृपया एक मान्य टैब चुनें।"
+
+#: admin/extra-tweaks/admin-notice-handler.php:62
+#: admin/extra-tweaks/dashboard-notes-handler.php:31
+#: includes/tabs/class-atweaks-tab-css.php:104
+#: includes/tabs/class-atweaks-tab-menu.php:193
+#: includes/tabs/class-atweaks-tab-scripts.php:160
+msgid "Security check failed. Please try again."
+msgstr "सुरक्षा जांच विफल रही। कृपया पुनः प्रयास करें।"
+
+#: admin/extra-tweaks/admin-notice-handler.php:72
+#: admin/extra-tweaks/dashboard-notes-handler.php:20
+msgid "You do not have permission to perform this action."
+msgstr "आपको यह क्रिया करने की अनुमति नहीं है।"
+
+#: admin/extra-tweaks/admin-notice.php:28
+msgid "Notification Title:"
+msgstr "सूचना शीर्षक:"
+
+#: admin/extra-tweaks/admin-notice.php:31
+msgid "Notification Content:"
+msgstr "सूचना सामग्री:"
+
+#: admin/extra-tweaks/admin-notice.php:37
+msgid "Enable notification"
+msgstr "सूचना सक्षम करें"
+
+#: admin/extra-tweaks/admin-notice.php:45
+msgid "Notification Type"
+msgstr "सूचना प्रकार"
+
+#: admin/extra-tweaks/admin-notice.php:47
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#: admin/extra-tweaks/admin-notice.php:48
+msgid "Confirmed"
+msgstr "पुष्ट"
+
+#: admin/extra-tweaks/admin-notice.php:49
+msgid "Info"
+msgstr "जानकारी"
+
+#: admin/extra-tweaks/admin-notice.php:50
+msgid "Attention"
+msgstr "ध्यान दें"
+
+#: admin/extra-tweaks/admin-notice.php:51
+msgid "Alert"
+msgstr "चेतावनी"
+
+#: admin/extra-tweaks/admin-notice.php:57
+msgid "Display Location"
+msgstr "प्रदर्शन स्थान"
+
+#: admin/extra-tweaks/admin-notice.php:59
+msgid "All admin pages"
+msgstr "सभी एडमिन पेज"
+
+#: admin/extra-tweaks/admin-notice.php:60
+msgid "Dashboard only"
+msgstr "केवल डैशबोर्ड"
+
+#: admin/extra-tweaks/admin-notice.php:61
+msgid "Pages only"
+msgstr "केवल पेज"
+
+#: admin/extra-tweaks/admin-notice.php:62
+msgid "Posts only"
+msgstr "केवल पोस्ट"
+
+#: admin/extra-tweaks/admin-notice.php:63
+msgid "Media only"
+msgstr "केवल मीडिया"
+
+#: admin/extra-tweaks/admin-notice.php:64
+msgid "Comments only"
+msgstr "केवल टिप्पणियाँ"
+
+#: admin/extra-tweaks/admin-notice.php:70
+msgid "Notification Visibility"
+msgstr "सूचना दृश्यता"
+
+#: admin/extra-tweaks/admin-notice.php:95
+msgid "Save Notification"
+msgstr "सूचना सहेजें"
+
+#: admin/extra-tweaks/dashboard-notes.php:20
+msgid "Dashboard notes are currently disabled."
+msgstr "डैशबोर्ड नोट्स वर्तमान में अक्षम हैं।"
+
+#: admin/extra-tweaks/dashboard-notes.php:45
+msgid "You do not have permission to view the shared notes."
+msgstr "आपको साझा नोट्स देखने की अनुमति नहीं है।"
+
+#: admin/extra-tweaks/dashboard-notes.php:79
+msgid "Save Note"
+msgstr "नोट सहेजें"
+
+#: admin/extra-tweaks/dashboard-notes.php:85
+msgid "Read access: "
+msgstr "पढ़ने की अनुमति: "
+
+#: admin/extra-tweaks/dashboard-notes.php:91
+msgid "Write access: "
+msgstr "लिखने की अनुमति: "
+
+#: admin/extra-tweaks/extra-tweaks-handler.php:18
+msgid "Access Denied."
+msgstr "प्रवेश अस्वीकार किया गया।"
+
+#: admin/extra-tweaks/extra-tweaks-handler.php:23
+msgid "Security check failed."
+msgstr "सुरक्षा जांच विफल रही।"
+
+#: admin/extra-tweaks/extra-tweaks-handler.php:82
+msgid "Settings saved."
+msgstr "सेटिंग्स सहेजी गईं।"
+
+#: admin/extra-tweaks/extra-tweaks.php:33
+#: includes/hooks-global.php:54
+#: includes/tabs/class-atweaks-tab-extratweaks.php:157
+msgid "Custom Small Size"
+msgstr "कस्टम छोटा आकार"
+
+#: admin/extra-tweaks/extra-tweaks.php:40
+#: includes/hooks-global.php:57
+#: includes/tabs/class-atweaks-tab-extratweaks.php:164
+msgid "Custom Medium Size"
+msgstr "कस्टम मध्यम आकार"
+
+#: admin/extra-tweaks/extra-tweaks.php:47
+#: includes/hooks-global.php:60
+#: includes/tabs/class-atweaks-tab-extratweaks.php:171
+msgid "Custom Large Size"
+msgstr "कस्टम बड़ा आकार"
+
+#: admin/extra-tweaks/extra-tweaks.php:64
+#: includes/tabs/class-atweaks-tab-extratweaks.php:41
+msgid "Extra Image Sizes"
+msgstr "अतिरिक्त इमेज आकार"
+
+#: admin/extra-tweaks/extra-tweaks.php:66
+msgid "These custom image sizes will be generated for newly uploaded images. The selection of image sizes on the frontend depends on your active theme and block settings."
+msgstr "ये कस्टम इमेज आकार नई अपलोड की गई इमेज के लिए बनाए जाएंगे। फ्रंटएंड पर इमेज आकार का चयन आपके सक्रिय थीम और ब्लॉक सेटिंग पर निर्भर करता है।"
+
+#: admin/extra-tweaks/extra-tweaks.php:69
+msgid "Here you can enable and configure additional custom image sizes. The default WordPress sizes (Thumbnail, Medium, Large) can be adjusted on the "
+msgstr "यहाँ आप अतिरिक्त कस्टम इमेज आकार सक्षम और कॉन्फ़िगर कर सकते हैं। डिफ़ॉल्ट WordPress आकार (थंबनेल, मीडियम, लार्ज) को समायोजित किया जा सकता है "
+
+#: admin/extra-tweaks/extra-tweaks.php:71
+msgid "Media Settings page."
+msgstr "मीडिया सेटिंग्स पेज पर।"
+
+#: admin/extra-tweaks/extra-tweaks.php:89
+#: includes/tabs/class-atweaks-tab-extratweaks.php:57
+msgid "Enable"
+msgstr "सक्रिय करें"
+
+#: admin/extra-tweaks/extra-tweaks.php:98
+#: includes/tabs/class-atweaks-tab-extratweaks.php:65
+msgid "Crop"
+msgstr "क्रॉप करें"
+
+#: admin/extra-tweaks/extra-tweaks.php:102
+#: includes/tabs/class-atweaks-tab-extratweaks.php:69
+msgid "Width"
+msgstr "चौड़ाई"
+
+#: admin/extra-tweaks/extra-tweaks.php:114
+#: includes/tabs/class-atweaks-tab-extratweaks.php:77
+msgid "Height"
+msgstr "ऊंचाई"
+
+#: admin/extra-tweaks/extra-tweaks.php:129
+#: includes/tabs/class-atweaks-tab-extratweaks.php:88
+msgid "Shared Notes Settings"
+msgstr "साझा नोट्स सेटिंग्स"
+
+#: admin/extra-tweaks/extra-tweaks.php:130
+msgid "Enable shared notes and configure which user roles can read or write."
+msgstr "साझा नोट्स सक्षम करें और निर्धारित करें कि कौन से उपयोगकर्ता भूमिकाएँ पढ़ या लिख सकती हैं।"
+
+#: admin/extra-tweaks/extra-tweaks.php:140
+#: includes/tabs/class-atweaks-tab-extratweaks.php:93
+msgid "Enable Shared Notes on Dashboard"
+msgstr "डैशबोर्ड पर साझा नोट्स सक्षम करें"
+
+#: admin/extra-tweaks/extra-tweaks.php:160
+#: includes/tabs/class-atweaks-tab-extratweaks.php:108
+msgid "Read"
+msgstr "पढ़ें"
+
+#: admin/extra-tweaks/extra-tweaks.php:168
+#: includes/tabs/class-atweaks-tab-extratweaks.php:109
+msgid "Write"
+msgstr "लिखें"
+
+#: admin/extra-tweaks/extra-tweaks.php:176
+#: includes/hooks-admin.php:141
+#: includes/tabs/class-atweaks-tab-extratweaks.php:116
+msgid "Admin Notification"
+msgstr "एडमिन सूचना"
+
+#: admin/extra-tweaks/extra-tweaks.php:177
+msgid "Enable a global admin notification that can be managed directly from the dashboard."
+msgstr "एक वैश्विक एडमिन सूचना सक्षम करें जिसे सीधे डैशबोर्ड से प्रबंधित किया जा सकता है।"
+
+#: admin/extra-tweaks/extra-tweaks.php:189
+msgid "Enable Admin Notification (Dashboard widget)"
+msgstr "एडमिन सूचना सक्षम करें (डैशबोर्ड विजेट)"
+
+#: admin/extra-tweaks/extra-tweaks.php:197
+#: includes/tabs/class-atweaks-tab-extratweaks.php:130
+msgid "Allow Editors to manage the Admin Notification"
+msgstr "संपादकों को एडमिन सूचना प्रबंधित करने की अनुमति दें"
+
+#: admin/extra-tweaks/extra-tweaks.php:200
+#: includes/tabs/class-atweaks-tab-extratweaks.php:133
+#: includes/tabs/class-atweaks-tab-scripts.php:111
+msgid "Save Settings"
+msgstr "सेटिंग्स सहेजें"
+
+#: includes/helpers/redirect.php:25
+msgid "Operation completed successfully."
+msgstr "कार्य सफलतापूर्वक पूर्ण हुआ।"
+
+#: includes/helpers/redirect.php:26
+msgid "An error occurred. Please try again."
+msgstr "एक त्रुटि हुई। कृपया पुनः प्रयास करें।"
+
+#: includes/helpers/redirect.php:27
+msgid "No settings were found to remove because none were configured."
+msgstr "कोई सेटिंग्स नहीं मिलीं जिन्हें हटाया जा सके क्योंकि कोई कॉन्फ़िगर नहीं की गई थी।"
+
+#: includes/helpers/redirect.php:28
+msgid "Action completed, but check for potential issues."
+msgstr "क्रिया पूर्ण हुई, लेकिन संभावित समस्याओं की जांच करें।"
+
+#: includes/helpers/redirect.php:30
+msgid "Operation completed."
+msgstr "कार्य पूर्ण हुआ।"
+
+#: includes/hooks-admin.php:127
+msgid "Shared Notes"
+msgstr "साझा नोट्स"
+
+#: includes/hooks-admin.php:243
+msgid "Thumbnail"
+msgstr "थंबनेल"
+
+#: includes/hooks-admin.php:244
+msgid "Medium"
+msgstr "मध्यम"
+
+#: includes/hooks-admin.php:245
+msgid "Large"
+msgstr "बड़ा"
+
+#: includes/hooks-admin.php:246
+msgid "Full size"
+msgstr "पूर्ण आकार"
+
+#: includes/hooks-admin.php:251
+msgid "Original"
+msgstr "मूल"
+
+#: includes/hooks-admin.php:265
+msgid "Custom Small"
+msgstr "कस्टम छोटा"
+
+#: includes/hooks-admin.php:271
+msgid "Custom Medium"
+msgstr "कस्टम मध्यम"
+
+#: includes/hooks-admin.php:277
+msgid "Custom Large"
+msgstr "कस्टम बड़ा"
+
+#: includes/hooks-frontend.php:125
+msgid "XML-RPC services are disabled on this site."
+msgstr "इस साइट पर XML-RPC सेवाएँ अक्षम हैं।"
+
+#: includes/hooks-frontend.php:126
+msgid "XML-RPC Disabled"
+msgstr "XML-RPC अक्षम"
+
+#: includes/tabs/class-atweaks-tab-about.php:37
+msgid "About Admin Tweak Suite"
+msgstr "Admin Tweak Suite के बारे में"
+
+#: includes/tabs/class-atweaks-tab-about.php:38
+msgid "This plugin was originally created for my personal use, focusing on improving performance and simplifying the WordPress admin experience."
+msgstr "यह प्लगइन मूल रूप से मेरे निजी उपयोग के लिए बनाया गया था, जिसका उद्देश्य प्रदर्शन में सुधार करना और WordPress एडमिन अनुभव को सरल बनाना था।"
+
+#: includes/tabs/class-atweaks-tab-about.php:39
+msgid "Over time, the plugin has evolved to include features like custom image size management, script and embed control, and shared dashboard notes with role-based permissions."
+msgstr "समय के साथ, इस प्लगइन में कस्टम इमेज आकार प्रबंधन, स्क्रिप्ट और एम्बेड नियंत्रण, तथा भूमिका-आधारित अनुमति के साथ साझा डैशबोर्ड नोट्स जैसी सुविधाएँ शामिल हो गई हैं।"
+
+#: includes/tabs/class-atweaks-tab-about.php:40
+msgid "It has grown into a lightweight toolset designed to optimize loading times and provide useful tweaks for the WordPress admin environment."
+msgstr "यह अब एक हल्के टूलसेट के रूप में विकसित हो चुका है, जिसे लोडिंग समय को अनुकूलित करने और WordPress एडमिन वातावरण के लिए उपयोगी सुधार प्रदान करने के लिए डिज़ाइन किया गया है।"
+
+#: includes/tabs/class-atweaks-tab-about.php:41
+msgid "Seeing its potential to help others, I decided to refine it into a proper plugin and share it with the WordPress community on WordPress.org."
+msgstr "इसकी संभावनाओं को देखते हुए, मैंने इसे एक संपूर्ण प्लगइन के रूप में परिष्कृत करने और WordPress.org पर WordPress समुदाय के साथ साझा करने का निर्णय लिया।"
+
+#: includes/tabs/class-atweaks-tab-about.php:44
+msgid "Support Development"
+msgstr "विकास को समर्थन दें"
+
+#: includes/tabs/class-atweaks-tab-about.php:45
+msgid "Thank you for using Admin Tweaks Suite! Your support makes it possible to maintain, improve, and expand this plugin. If you find it helpful, consider supporting its development."
+msgstr "Admin Tweaks Suite का उपयोग करने के लिए धन्यवाद! आपका समर्थन इस प्लगइन को बनाए रखने, सुधारने और विस्तारित करने में मदद करता है। यदि आपको यह उपयोगी लगे, तो कृपया इसके विकास को समर्थन देने पर विचार करें।"
+
+#: includes/tabs/class-atweaks-tab-about.php:46
+msgid "Every contribution, whether big or small, helps cover development costs and ensures the plugin stays free and up-to-date for everyone."
+msgstr "हर योगदान, चाहे बड़ा हो या छोटा, विकास लागत को पूरा करने में मदद करता है और सुनिश्चित करता है कि प्लगइन सभी के लिए मुफ्त और अद्यतन बना रहे।"
+
+#: includes/tabs/class-atweaks-tab-about.php:47
+msgid "Thank you for your generosity!"
+msgstr "आपकी उदारता के लिए धन्यवाद!"
+
+#: includes/tabs/class-atweaks-tab-about.php:60
+msgid "Donate With PayPal"
+msgstr "PayPal से दान करें"
+
+#: includes/tabs/class-atweaks-tab-css.php:39
+msgid "Custom CSS Settings"
+msgstr "कस्टम CSS सेटिंग्स"
+
+#: includes/tabs/class-atweaks-tab-css.php:40
+msgid "Use these sections to add custom inline CSS for the frontend and admin panel."
+msgstr "फ्रंटएंड और एडमिन पैनल के लिए कस्टम इनलाइन CSS जोड़ने के लिए इन सेक्शनों का उपयोग करें।"
+
+#: includes/tabs/class-atweaks-tab-css.php:42
+msgid "Note: The CSS added here will be directly inserted as inline styles in the respective parts of the website and <strong>affect all users of the website, regardless of their role</strong>."
+msgstr "नोट: यहाँ जो CSS जोड़ी जाएगी, वह सीधे वेबसाइट के संबंधित हिस्सों में इनलाइन स्टाइल के रूप में डाली जाएगी और <strong>उपयोगकर्ता की भूमिका की परवाह किए बिना सभी उपयोगकर्ताओं को प्रभावित करेगी</strong>।"
+
+#: includes/tabs/class-atweaks-tab-css.php:46
+msgid "Frontend CSS"
+msgstr "फ्रंटएंड CSS"
+
+#: includes/tabs/class-atweaks-tab-css.php:47
+msgid "Save Frontend CSS"
+msgstr "फ्रंटएंड CSS सहेजें"
+
+#: includes/tabs/class-atweaks-tab-css.php:47
+msgid "Clear Frontend CSS"
+msgstr "फ्रंटएंड CSS साफ़ करें"
+
+#: includes/tabs/class-atweaks-tab-css.php:49
+msgid "Admin Panel CSS"
+msgstr "एडमिन पैनल CSS"
+
+#: includes/tabs/class-atweaks-tab-css.php:50
+msgid "Save Admin CSS"
+msgstr "एडमिन CSS सहेजें"
+
+#: includes/tabs/class-atweaks-tab-css.php:50
+msgid "Clear Admin CSS"
+msgstr "एडमिन CSS साफ़ करें"
+
+#: includes/tabs/class-atweaks-tab-css.php:75
+msgid "Enter custom CSS here..."
+msgstr "यहाँ अपना कस्टम CSS दर्ज करें..."
+
+#: includes/tabs/class-atweaks-tab-css.php:95
+#: includes/tabs/class-atweaks-tab-menu.php:189
+#: includes/tabs/class-atweaks-tab-scripts.php:156
+msgid "Access Denied: You do not have permission to perform this action."
+msgstr "प्रवेश अस्वीकृत: आपको इस क्रिया को करने की अनुमति नहीं है।"
+
+#. translators: %s: CSS type (Frontend/Admin).
+#: includes/tabs/class-atweaks-tab-css.php:125
+#: includes/tabs/class-atweaks-tab-css.php:144
+#, php-format
+msgid "%s CSS has been successfully cleared."
+msgstr "%s CSS सफलतापूर्वक साफ़ कर दिया गया है।"
+
+#. translators: %s: CSS type (Frontend/Admin).
+#: includes/tabs/class-atweaks-tab-css.php:134
+#, php-format
+msgid "%s CSS has been successfully saved."
+msgstr "%s CSS सफलतापूर्वक सहेजा गया है।"
+
+#: includes/tabs/class-atweaks-tab-css.php:150
+msgid "Unknown form action. Please try again."
+msgstr "अज्ञात फॉर्म क्रिया। कृपया पुनः प्रयास करें।"
+
+#: includes/tabs/class-atweaks-tab-extratweaks.php:42
+msgid "These custom image sizes will be generated for newly uploaded images."
+msgstr "ये कस्टम इमेज साइज़ नई अपलोड की गई छवियों के लिए उत्पन्न किए जाएंगे।"
+
+#: includes/tabs/class-atweaks-tab-extratweaks.php:124
+msgid "Enable Admin Notification"
+msgstr "एडमिन सूचना सक्षम करें"
+
+#: includes/tabs/class-atweaks-tab-menu.php:36
+msgid "Menu Order"
+msgstr "मेनू क्रम"
+
+#: includes/tabs/class-atweaks-tab-menu.php:39
+msgid "JavaScript is required to use the drag-and-drop functionality."
+msgstr "ड्रैग-एंड-ड्रॉप फ़ंक्शन का उपयोग करने के लिए JavaScript आवश्यक है।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:43
+msgid "Use drag-and-drop to reorder the menu items."
+msgstr "मेनू आइटम को पुन: व्यवस्थित करने के लिए ड्रैग-एंड-ड्रॉप का उपयोग करें।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:44
+msgid "Note: This affects all users."
+msgstr "नोट: यह सभी उपयोगकर्ताओं को प्रभावित करता है।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:61
+#: includes/tabs/class-atweaks-tab-menu.php:300
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#: includes/tabs/class-atweaks-tab-menu.php:80
+#: includes/tabs/class-atweaks-tab-menu.php:306
+#: includes/tabs/class-atweaks-tab-menu.php:323
+#: includes/tabs/class-atweaks-tab-menu.php:342
+msgid "Separator"
+msgstr "विभाजक"
+
+#: includes/tabs/class-atweaks-tab-menu.php:114
+msgid "Hide \"Minimize Menu\" button"
+msgstr "\"मिनिमाइज़ मेनू\" बटन छिपाएँ"
+
+#: includes/tabs/class-atweaks-tab-menu.php:127
+msgid "Separator Height"
+msgstr "विभाजक ऊँचाई"
+
+#: includes/tabs/class-atweaks-tab-menu.php:152
+msgid "Menu"
+msgstr "मेनू"
+
+#: includes/tabs/class-atweaks-tab-menu.php:153
+msgid "Position"
+msgstr "स्थिति"
+
+#: includes/tabs/class-atweaks-tab-menu.php:170
+msgid "Save Changes"
+msgstr "परिवर्तन सहेजें"
+
+#: includes/tabs/class-atweaks-tab-menu.php:171
+msgid "Add Separator"
+msgstr "विभाजक जोड़ें"
+
+#: includes/tabs/class-atweaks-tab-menu.php:172
+msgid "Reset Menu"
+msgstr "मेनू रीसेट करें"
+
+#: includes/tabs/class-atweaks-tab-menu.php:185
+msgid "No action provided."
+msgstr "कोई क्रिया प्रदान नहीं की गई।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:215
+msgid "Unknown action. Please try again."
+msgstr "अज्ञात क्रिया। कृपया पुनः प्रयास करें।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:218
+msgid "Menu updated successfully."
+msgstr "मेनू सफलतापूर्वक अपडेट किया गया।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:262
+msgid "New separator has been added."
+msgstr "नया विभाजक जोड़ दिया गया है।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:274
+msgid "No custom menu settings found to reset."
+msgstr "रीसेट करने के लिए कोई कस्टम मेनू सेटिंग्स नहीं मिली।"
+
+#: includes/tabs/class-atweaks-tab-menu.php:276
+msgid "Menu has been reset."
+msgstr "मेनू रीसेट कर दिया गया है।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:38
+msgid "Script Handler Settings"
+msgstr "स्क्रिप्ट हैंडलर सेटिंग्स"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:39
+msgid "Manage script settings for the frontend. Use with caution."
+msgstr "फ्रंटएंड के लिए स्क्रिप्ट सेटिंग्स प्रबंधित करें। सावधानी से उपयोग करें।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:47
+msgid "Emoji Settings"
+msgstr "इमोजी सेटिंग्स"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:51
+msgid "Prevent emoji-related JavaScript and styles from loading on the frontend."
+msgstr "फ्रंटएंड पर इमोजी-संबंधित JavaScript और स्टाइल्स लोड होने से रोकें।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:52
+msgid "Improve site performance by reducing unnecessary script and style loading."
+msgstr "अनावश्यक स्क्रिप्ट और स्टाइल लोडिंग को कम करके साइट प्रदर्शन सुधारें।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:53
+msgid "Enhance GDPR compliance by minimizing third-party emoji-related tracking and cookie usage."
+msgstr "थर्ड-पार्टी इमोजी ट्रैकिंग और कुकी उपयोग को न्यूनतम करके GDPR अनुपालन बढ़ाएँ।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:60
+msgid "Embed Settings"
+msgstr "एम्बेड सेटिंग्स"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:64
+msgid "Remove oEmbed functionality (e.g., YouTube, Twitter) from the frontend and REST API."
+msgstr "फ्रंटएंड और REST API से oEmbed फ़ंक्शन (जैसे YouTube, Twitter) हटाएँ।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:65
+msgid "Prevent embed-related scripts from loading."
+msgstr "एम्बेड-संबंधित स्क्रिप्ट लोड होने से रोकें।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:66
+msgid "Enhance GDPR compliance by reducing third-party tracking and cookie usage."
+msgstr "थर्ड-पार्टी ट्रैकिंग और कुकी उपयोग को कम करके GDPR अनुपालन बढ़ाएँ।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:67
+msgid "Boost performance metrics and PageSpeed Insights scores by reducing external resource loading."
+msgstr "बाहरी संसाधन लोडिंग कम करके प्रदर्शन मेट्रिक्स और PageSpeed Insights स्कोर बढ़ाएँ।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:74
+msgid "jQuery Migrate Settings"
+msgstr "jQuery माइग्रेट सेटिंग्स"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:78
+msgid "Improve site performance by removing outdated compatibility scripts."
+msgstr "पुरानी अनुकूलता स्क्रिप्ट हटाकर साइट प्रदर्शन सुधारें।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:79
+msgid "Reduce JavaScript loading time and improve PageSpeed Insights scores."
+msgstr "JavaScript लोडिंग समय कम करें और PageSpeed Insights स्कोर बढ़ाएँ।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:86
+msgid "XML-RPC Settings"
+msgstr "XML-RPC सेटिंग्स"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:90
+msgid "Prevent external XML-RPC requests and reduce the risk of DDoS and brute-force attacks."
+msgstr "बाहरी XML-RPC अनुरोधों को रोकें और DDoS तथा brute-force हमलों का जोखिम कम करें।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:91
+msgid "Improve site security by closing an often unused attack vector."
+msgstr "अक्सर अनुपयोगी अटैक वेक्टर को बंद करके साइट सुरक्षा बढ़ाएँ।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:97
+msgid "Custom Inline Script"
+msgstr "कस्टम इनलाइन स्क्रिप्ट"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:98
+msgid "Add custom JavaScript code that will be included in the footer of your site's frontend."
+msgstr "कस्टम JavaScript कोड जोड़ें जो आपकी साइट के फ्रंटएंड फुटर में शामिल किया जाएगा।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:105
+msgid "Enter custom JavaScript here..."
+msgstr "यहाँ कस्टम JavaScript दर्ज करें..."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:114
+msgid "Reset to default"
+msgstr "डिफ़ॉल्ट पर रीसेट करें"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:143
+msgid "Disable"
+msgstr "अक्षम करें"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:180
+msgid "All script settings have been reset."
+msgstr "सभी स्क्रिप्ट सेटिंग्स रीसेट कर दी गई हैं।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:196
+msgid "Custom script has been successfully saved."
+msgstr "कस्टम स्क्रिप्ट सफलतापूर्वक सहेजा गया है।"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:200
+msgid "Custom script has been successfully cleared."
+msgstr "कस्टम स्क्रिप्ट सफलतापूर्वक साफ़ कर दिया गया है।"

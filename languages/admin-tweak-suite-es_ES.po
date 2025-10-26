@@ -1,0 +1,643 @@
+# Copyright (C) 2025 Mikael Sundström
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin Tweak Suite 1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/admin-tweak-suite\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-26T16:05:01+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: admin-tweak-suite\n"
+
+#. Plugin Name of the plugin
+#: admin-tweak-suite.php
+#: admin/admin-loader.php:17
+#: admin/admin-loader.php:18
+#: admin/admin-page.php:20
+msgid "Admin Tweak Suite"
+msgstr "Admin Tweak Suite"
+
+#. Plugin URI of the plugin
+#: admin-tweak-suite.php
+msgid "https://github.com/Mikael-Sundstrom/admin-tweak-suite"
+msgstr "https://github.com/Mikael-Sundstrom/admin-tweak-suite"
+
+#. Description of the plugin
+#: admin-tweak-suite.php
+msgid "Effortlessly clean up, optimize and customize your WordPress admin — menu order, CSS, scripts and dashboard tweaks in one lightweight toolkit."
+msgstr "Limpia, optimiza y personaliza fácilmente el panel de administración de WordPress — orden del menú, CSS, scripts y ajustes del panel en una herramienta ligera."
+
+#. Author of the plugin
+#: admin-tweak-suite.php
+msgid "Mikael Sundström"
+msgstr "Mikael Sundström"
+
+#. Author URI of the plugin
+#: admin-tweak-suite.php
+msgid "https://github.com/Mikael-Sundstrom"
+msgstr "https://github.com/Mikael-Sundstrom"
+
+#: admin/admin-page.php:34
+msgid "Admin Menu"
+msgstr "Menú de administración"
+
+#: admin/admin-page.php:35
+msgid "CSS"
+msgstr "CSS"
+
+#: admin/admin-page.php:36
+msgid "Scripts"
+msgstr "Scripts"
+
+#: admin/admin-page.php:37
+msgid "Extra Tweaks"
+msgstr "Ajustes extra"
+
+#: admin/admin-page.php:38
+msgid "About"
+msgstr "Acerca de"
+
+#: admin/admin-page.php:86
+msgid "Invalid tab. Please select a valid tab."
+msgstr "Pestaña no válida. Por favor, selecciona una pestaña válida."
+
+#: admin/extra-tweaks/admin-notice-handler.php:62
+#: admin/extra-tweaks/dashboard-notes-handler.php:31
+#: includes/tabs/class-atweaks-tab-css.php:104
+#: includes/tabs/class-atweaks-tab-menu.php:193
+#: includes/tabs/class-atweaks-tab-scripts.php:160
+msgid "Security check failed. Please try again."
+msgstr "La verificación de seguridad ha fallado. Inténtalo de nuevo."
+
+#: admin/extra-tweaks/admin-notice-handler.php:72
+#: admin/extra-tweaks/dashboard-notes-handler.php:20
+msgid "You do not have permission to perform this action."
+msgstr "No tienes permiso para realizar esta acción."
+
+#: admin/extra-tweaks/admin-notice.php:28
+msgid "Notification Title:"
+msgstr "Título de la notificación:"
+
+#: admin/extra-tweaks/admin-notice.php:31
+msgid "Notification Content:"
+msgstr "Contenido de la notificación:"
+
+#: admin/extra-tweaks/admin-notice.php:37
+msgid "Enable notification"
+msgstr "Activar notificación"
+
+#: admin/extra-tweaks/admin-notice.php:45
+msgid "Notification Type"
+msgstr "Tipo de notificación"
+
+#: admin/extra-tweaks/admin-notice.php:47
+msgid "Default"
+msgstr "Predeterminado"
+
+#: admin/extra-tweaks/admin-notice.php:48
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#: admin/extra-tweaks/admin-notice.php:49
+msgid "Info"
+msgstr "Información"
+
+#: admin/extra-tweaks/admin-notice.php:50
+msgid "Attention"
+msgstr "Atención"
+
+#: admin/extra-tweaks/admin-notice.php:51
+msgid "Alert"
+msgstr "Alerta"
+
+#: admin/extra-tweaks/admin-notice.php:57
+msgid "Display Location"
+msgstr "Ubicación de visualización"
+
+#: admin/extra-tweaks/admin-notice.php:59
+msgid "All admin pages"
+msgstr "Todas las páginas de administración"
+
+#: admin/extra-tweaks/admin-notice.php:60
+msgid "Dashboard only"
+msgstr "Solo el panel"
+
+#: admin/extra-tweaks/admin-notice.php:61
+msgid "Pages only"
+msgstr "Solo páginas"
+
+#: admin/extra-tweaks/admin-notice.php:62
+msgid "Posts only"
+msgstr "Solo entradas"
+
+#: admin/extra-tweaks/admin-notice.php:63
+msgid "Media only"
+msgstr "Solo medios"
+
+#: admin/extra-tweaks/admin-notice.php:64
+msgid "Comments only"
+msgstr "Solo comentarios"
+
+#: admin/extra-tweaks/admin-notice.php:70
+msgid "Notification Visibility"
+msgstr "Visibilidad de la notificación"
+
+#: admin/extra-tweaks/admin-notice.php:95
+msgid "Save Notification"
+msgstr "Guardar notificación"
+
+#: admin/extra-tweaks/dashboard-notes.php:20
+msgid "Dashboard notes are currently disabled."
+msgstr "Las notas del panel están actualmente desactivadas."
+
+#: admin/extra-tweaks/dashboard-notes.php:45
+msgid "You do not have permission to view the shared notes."
+msgstr "No tienes permiso para ver las notas compartidas."
+
+#: admin/extra-tweaks/dashboard-notes.php:79
+msgid "Save Note"
+msgstr "Guardar nota"
+
+#: admin/extra-tweaks/dashboard-notes.php:85
+msgid "Read access: "
+msgstr "Acceso de lectura: "
+
+#: admin/extra-tweaks/dashboard-notes.php:91
+msgid "Write access: "
+msgstr "Acceso de escritura: "
+
+#: admin/extra-tweaks/extra-tweaks-handler.php:18
+msgid "Access Denied."
+msgstr "Acceso denegado."
+
+#: admin/extra-tweaks/extra-tweaks-handler.php:23
+msgid "Security check failed."
+msgstr "La verificación de seguridad ha fallado."
+
+#: admin/extra-tweaks/extra-tweaks-handler.php:82
+msgid "Settings saved."
+msgstr "Configuración guardada."
+
+#: admin/extra-tweaks/extra-tweaks.php:33
+#: includes/hooks-global.php:54
+#: includes/tabs/class-atweaks-tab-extratweaks.php:157
+msgid "Custom Small Size"
+msgstr "Tamaño personalizado pequeño"
+
+#: admin/extra-tweaks/extra-tweaks.php:40
+#: includes/hooks-global.php:57
+#: includes/tabs/class-atweaks-tab-extratweaks.php:164
+msgid "Custom Medium Size"
+msgstr "Tamaño personalizado mediano"
+
+#: admin/extra-tweaks/extra-tweaks.php:47
+#: includes/hooks-global.php:60
+#: includes/tabs/class-atweaks-tab-extratweaks.php:171
+msgid "Custom Large Size"
+msgstr "Tamaño personalizado grande"
+
+#: admin/extra-tweaks/extra-tweaks.php:64
+#: includes/tabs/class-atweaks-tab-extratweaks.php:41
+msgid "Extra Image Sizes"
+msgstr "Tamaños de imagen adicionales"
+
+#: admin/extra-tweaks/extra-tweaks.php:66
+msgid "These custom image sizes will be generated for newly uploaded images. The selection of image sizes on the frontend depends on your active theme and block settings."
+msgstr "Estos tamaños de imagen personalizados se generarán para las imágenes subidas recientemente. La selección de tamaños en el frontend depende del tema activo y la configuración de bloques."
+
+#: admin/extra-tweaks/extra-tweaks.php:69
+msgid "Here you can enable and configure additional custom image sizes. The default WordPress sizes (Thumbnail, Medium, Large) can be adjusted on the "
+msgstr "Aquí puedes habilitar y configurar tamaños de imagen personalizados adicionales. Los tamaños predeterminados de WordPress (Miniatura, Mediano, Grande) se pueden ajustar en la "
+
+#: admin/extra-tweaks/extra-tweaks.php:71
+msgid "Media Settings page."
+msgstr "página de ajustes de medios."
+
+#: admin/extra-tweaks/extra-tweaks.php:89
+#: includes/tabs/class-atweaks-tab-extratweaks.php:57
+msgid "Enable"
+msgstr "Activar"
+
+#: admin/extra-tweaks/extra-tweaks.php:98
+#: includes/tabs/class-atweaks-tab-extratweaks.php:65
+msgid "Crop"
+msgstr "Recortar"
+
+#: admin/extra-tweaks/extra-tweaks.php:102
+#: includes/tabs/class-atweaks-tab-extratweaks.php:69
+msgid "Width"
+msgstr "Ancho"
+
+#: admin/extra-tweaks/extra-tweaks.php:114
+#: includes/tabs/class-atweaks-tab-extratweaks.php:77
+msgid "Height"
+msgstr "Altura"
+
+#: admin/extra-tweaks/extra-tweaks.php:129
+#: includes/tabs/class-atweaks-tab-extratweaks.php:88
+msgid "Shared Notes Settings"
+msgstr "Configuración de notas compartidas"
+
+#: admin/extra-tweaks/extra-tweaks.php:130
+msgid "Enable shared notes and configure which user roles can read or write."
+msgstr "Activa las notas compartidas y configura qué roles de usuario pueden leer o escribir."
+
+#: admin/extra-tweaks/extra-tweaks.php:140
+#: includes/tabs/class-atweaks-tab-extratweaks.php:93
+msgid "Enable Shared Notes on Dashboard"
+msgstr "Activar notas compartidas en el panel"
+
+#: admin/extra-tweaks/extra-tweaks.php:160
+#: includes/tabs/class-atweaks-tab-extratweaks.php:108
+msgid "Read"
+msgstr "Leer"
+
+#: admin/extra-tweaks/extra-tweaks.php:168
+#: includes/tabs/class-atweaks-tab-extratweaks.php:109
+msgid "Write"
+msgstr "Escribir"
+
+#: admin/extra-tweaks/extra-tweaks.php:176
+#: includes/hooks-admin.php:141
+#: includes/tabs/class-atweaks-tab-extratweaks.php:116
+msgid "Admin Notification"
+msgstr "Notificación del administrador"
+
+#: admin/extra-tweaks/extra-tweaks.php:177
+msgid "Enable a global admin notification that can be managed directly from the dashboard."
+msgstr "Activa una notificación global de administrador que puede gestionarse directamente desde el panel."
+
+#: admin/extra-tweaks/extra-tweaks.php:189
+msgid "Enable Admin Notification (Dashboard widget)"
+msgstr "Activar notificación de administrador (widget del panel)"
+
+#: admin/extra-tweaks/extra-tweaks.php:197
+#: includes/tabs/class-atweaks-tab-extratweaks.php:130
+msgid "Allow Editors to manage the Admin Notification"
+msgstr "Permitir que los editores gestionen la notificación del administrador"
+
+#: admin/extra-tweaks/extra-tweaks.php:200
+#: includes/tabs/class-atweaks-tab-extratweaks.php:133
+#: includes/tabs/class-atweaks-tab-scripts.php:111
+msgid "Save Settings"
+msgstr "Guardar configuración"
+
+#: includes/helpers/redirect.php:25
+msgid "Operation completed successfully."
+msgstr "Operación completada con éxito."
+
+#: includes/helpers/redirect.php:26
+msgid "An error occurred. Please try again."
+msgstr "Ha ocurrido un error. Por favor, inténtalo de nuevo."
+
+#: includes/helpers/redirect.php:27
+msgid "No settings were found to remove because none were configured."
+msgstr "No se encontraron ajustes para eliminar porque no se configuró ninguno."
+
+#: includes/helpers/redirect.php:28
+msgid "Action completed, but check for potential issues."
+msgstr "Acción completada, pero verifica posibles problemas."
+
+#: includes/helpers/redirect.php:30
+msgid "Operation completed."
+msgstr "Operación completada."
+
+#: includes/hooks-admin.php:127
+msgid "Shared Notes"
+msgstr "Notas compartidas"
+
+#: includes/hooks-admin.php:243
+msgid "Thumbnail"
+msgstr "Miniatura"
+
+#: includes/hooks-admin.php:244
+msgid "Medium"
+msgstr "Mediano"
+
+#: includes/hooks-admin.php:245
+msgid "Large"
+msgstr "Grande"
+
+#: includes/hooks-admin.php:246
+msgid "Full size"
+msgstr "Tamaño completo"
+
+#: includes/hooks-admin.php:251
+msgid "Original"
+msgstr "Original"
+
+#: includes/hooks-admin.php:265
+msgid "Custom Small"
+msgstr "Personalizado pequeño"
+
+#: includes/hooks-admin.php:271
+msgid "Custom Medium"
+msgstr "Personalizado mediano"
+
+#: includes/hooks-admin.php:277
+msgid "Custom Large"
+msgstr "Personalizado grande"
+
+#: includes/hooks-frontend.php:125
+msgid "XML-RPC services are disabled on this site."
+msgstr "Los servicios XML-RPC están deshabilitados en este sitio."
+
+#: includes/hooks-frontend.php:126
+msgid "XML-RPC Disabled"
+msgstr "XML-RPC deshabilitado"
+
+#: includes/tabs/class-atweaks-tab-about.php:37
+msgid "About Admin Tweak Suite"
+msgstr "Acerca de Admin Tweak Suite"
+
+#: includes/tabs/class-atweaks-tab-about.php:38
+msgid "This plugin was originally created for my personal use, focusing on improving performance and simplifying the WordPress admin experience."
+msgstr "Este plugin fue creado originalmente para mi uso personal, centrado en mejorar el rendimiento y simplificar la experiencia del administrador de WordPress."
+
+#: includes/tabs/class-atweaks-tab-about.php:39
+msgid "Over time, the plugin has evolved to include features like custom image size management, script and embed control, and shared dashboard notes with role-based permissions."
+msgstr "Con el tiempo, el plugin ha evolucionado para incluir funciones como la gestión de tamaños de imagen personalizados, el control de scripts e incrustaciones y notas compartidas en el panel con permisos basados en roles."
+
+#: includes/tabs/class-atweaks-tab-about.php:40
+msgid "It has grown into a lightweight toolset designed to optimize loading times and provide useful tweaks for the WordPress admin environment."
+msgstr "Se ha convertido en un conjunto de herramientas ligero diseñado para optimizar los tiempos de carga y proporcionar ajustes útiles para el entorno de administración de WordPress."
+
+#: includes/tabs/class-atweaks-tab-about.php:41
+msgid "Seeing its potential to help others, I decided to refine it into a proper plugin and share it with the WordPress community on WordPress.org."
+msgstr "Al ver su potencial para ayudar a otros, decidí refinarlo como un plugin completo y compartirlo con la comunidad de WordPress en WordPress.org."
+
+#: includes/tabs/class-atweaks-tab-about.php:44
+msgid "Support Development"
+msgstr "Apoyar el desarrollo"
+
+#: includes/tabs/class-atweaks-tab-about.php:45
+msgid "Thank you for using Admin Tweaks Suite! Your support makes it possible to maintain, improve, and expand this plugin. If you find it helpful, consider supporting its development."
+msgstr "¡Gracias por usar Admin Tweaks Suite! Tu apoyo hace posible mantener, mejorar y ampliar este plugin. Si te resulta útil, considera apoyar su desarrollo."
+
+#: includes/tabs/class-atweaks-tab-about.php:46
+msgid "Every contribution, whether big or small, helps cover development costs and ensures the plugin stays free and up-to-date for everyone."
+msgstr "Cada contribución, grande o pequeña, ayuda a cubrir los costes de desarrollo y garantiza que el plugin siga siendo gratuito y esté siempre actualizado para todos."
+
+#: includes/tabs/class-atweaks-tab-about.php:47
+msgid "Thank you for your generosity!"
+msgstr "¡Gracias por tu generosidad!"
+
+#: includes/tabs/class-atweaks-tab-about.php:60
+msgid "Donate With PayPal"
+msgstr "Donar con PayPal"
+
+#: includes/tabs/class-atweaks-tab-css.php:39
+msgid "Custom CSS Settings"
+msgstr "Ajustes CSS personalizados"
+
+#: includes/tabs/class-atweaks-tab-css.php:40
+msgid "Use these sections to add custom inline CSS for the frontend and admin panel."
+msgstr "Utiliza estas secciones para agregar CSS personalizado en línea para el frontend y el panel de administración."
+
+#: includes/tabs/class-atweaks-tab-css.php:42
+msgid "Note: The CSS added here will be directly inserted as inline styles in the respective parts of the website and <strong>affect all users of the website, regardless of their role</strong>."
+msgstr "Nota: El CSS añadido aquí se insertará directamente como estilos en línea en las partes correspondientes del sitio web y <strong>afectará a todos los usuarios del sitio, independientemente de su rol</strong>."
+
+#: includes/tabs/class-atweaks-tab-css.php:46
+msgid "Frontend CSS"
+msgstr "CSS del frontend"
+
+#: includes/tabs/class-atweaks-tab-css.php:47
+msgid "Save Frontend CSS"
+msgstr "Guardar CSS del frontend"
+
+#: includes/tabs/class-atweaks-tab-css.php:47
+msgid "Clear Frontend CSS"
+msgstr "Borrar CSS del frontend"
+
+#: includes/tabs/class-atweaks-tab-css.php:49
+msgid "Admin Panel CSS"
+msgstr "CSS del panel de administración"
+
+#: includes/tabs/class-atweaks-tab-css.php:50
+msgid "Save Admin CSS"
+msgstr "Guardar CSS del administrador"
+
+#: includes/tabs/class-atweaks-tab-css.php:50
+msgid "Clear Admin CSS"
+msgstr "Borrar CSS del administrador"
+
+#: includes/tabs/class-atweaks-tab-css.php:75
+msgid "Enter custom CSS here..."
+msgstr "Introduce CSS personalizado aquí..."
+
+#: includes/tabs/class-atweaks-tab-css.php:95
+#: includes/tabs/class-atweaks-tab-menu.php:189
+#: includes/tabs/class-atweaks-tab-scripts.php:156
+msgid "Access Denied: You do not have permission to perform this action."
+msgstr "Acceso denegado: no tienes permiso para realizar esta acción."
+
+#. translators: %s: CSS type (Frontend/Admin).
+#: includes/tabs/class-atweaks-tab-css.php:125
+#: includes/tabs/class-atweaks-tab-css.php:144
+#, php-format
+msgid "%s CSS has been successfully cleared."
+msgstr "El CSS de %s ha sido borrado correctamente."
+
+#. translators: %s: CSS type (Frontend/Admin).
+#: includes/tabs/class-atweaks-tab-css.php:134
+#, php-format
+msgid "%s CSS has been successfully saved."
+msgstr "El CSS de %s ha sido guardado correctamente."
+
+#: includes/tabs/class-atweaks-tab-css.php:150
+msgid "Unknown form action. Please try again."
+msgstr "Acción del formulario desconocida. Por favor, inténtalo de nuevo."
+
+#: includes/tabs/class-atweaks-tab-extratweaks.php:42
+msgid "These custom image sizes will be generated for newly uploaded images."
+msgstr "Estos tamaños de imagen personalizados se generarán para las imágenes recién subidas."
+
+#: includes/tabs/class-atweaks-tab-extratweaks.php:124
+msgid "Enable Admin Notification"
+msgstr "Habilitar notificación del administrador"
+
+#: includes/tabs/class-atweaks-tab-menu.php:36
+msgid "Menu Order"
+msgstr "Orden del menú"
+
+#: includes/tabs/class-atweaks-tab-menu.php:39
+msgid "JavaScript is required to use the drag-and-drop functionality."
+msgstr "Se requiere JavaScript para usar la funcionalidad de arrastrar y soltar."
+
+#: includes/tabs/class-atweaks-tab-menu.php:43
+msgid "Use drag-and-drop to reorder the menu items."
+msgstr "Usa arrastrar y soltar para reordenar los elementos del menú."
+
+#: includes/tabs/class-atweaks-tab-menu.php:44
+msgid "Note: This affects all users."
+msgstr "Nota: Esto afecta a todos los usuarios."
+
+#: includes/tabs/class-atweaks-tab-menu.php:61
+#: includes/tabs/class-atweaks-tab-menu.php:300
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: includes/tabs/class-atweaks-tab-menu.php:80
+#: includes/tabs/class-atweaks-tab-menu.php:306
+#: includes/tabs/class-atweaks-tab-menu.php:323
+#: includes/tabs/class-atweaks-tab-menu.php:342
+msgid "Separator"
+msgstr "Separador"
+
+#: includes/tabs/class-atweaks-tab-menu.php:114
+msgid "Hide \"Minimize Menu\" button"
+msgstr "Ocultar el botón \"Minimizar menú\""
+
+#: includes/tabs/class-atweaks-tab-menu.php:127
+msgid "Separator Height"
+msgstr "Altura del separador"
+
+#: includes/tabs/class-atweaks-tab-menu.php:152
+msgid "Menu"
+msgstr "Menú"
+
+#: includes/tabs/class-atweaks-tab-menu.php:153
+msgid "Position"
+msgstr "Posición"
+
+#: includes/tabs/class-atweaks-tab-menu.php:170
+msgid "Save Changes"
+msgstr "Guardar cambios"
+
+#: includes/tabs/class-atweaks-tab-menu.php:171
+msgid "Add Separator"
+msgstr "Añadir separador"
+
+#: includes/tabs/class-atweaks-tab-menu.php:172
+msgid "Reset Menu"
+msgstr "Restablecer menú"
+
+#: includes/tabs/class-atweaks-tab-menu.php:185
+msgid "No action provided."
+msgstr "No se ha proporcionado ninguna acción."
+
+#: includes/tabs/class-atweaks-tab-menu.php:215
+msgid "Unknown action. Please try again."
+msgstr "Acción desconocida. Por favor, inténtalo de nuevo."
+
+#: includes/tabs/class-atweaks-tab-menu.php:218
+msgid "Menu updated successfully."
+msgstr "Menú actualizado correctamente."
+
+#: includes/tabs/class-atweaks-tab-menu.php:262
+msgid "New separator has been added."
+msgstr "Se ha añadido un nuevo separador."
+
+#: includes/tabs/class-atweaks-tab-menu.php:274
+msgid "No custom menu settings found to reset."
+msgstr "No se encontraron ajustes personalizados del menú para restablecer."
+
+#: includes/tabs/class-atweaks-tab-menu.php:276
+msgid "Menu has been reset."
+msgstr "El menú ha sido restablecido."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:38
+msgid "Script Handler Settings"
+msgstr "Configuración del gestor de scripts"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:39
+msgid "Manage script settings for the frontend. Use with caution."
+msgstr "Gestiona la configuración de scripts para el frontend. Usar con precaución."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:47
+msgid "Emoji Settings"
+msgstr "Configuración de emojis"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:51
+msgid "Prevent emoji-related JavaScript and styles from loading on the frontend."
+msgstr "Evitar que se carguen scripts y estilos relacionados con emojis en el frontend."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:52
+msgid "Improve site performance by reducing unnecessary script and style loading."
+msgstr "Mejorar el rendimiento del sitio reduciendo la carga innecesaria de scripts y estilos."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:53
+msgid "Enhance GDPR compliance by minimizing third-party emoji-related tracking and cookie usage."
+msgstr "Mejorar el cumplimiento del RGPD minimizando el seguimiento y uso de cookies relacionados con emojis de terceros."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:60
+msgid "Embed Settings"
+msgstr "Configuración de incrustaciones"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:64
+msgid "Remove oEmbed functionality (e.g., YouTube, Twitter) from the frontend and REST API."
+msgstr "Eliminar la funcionalidad oEmbed (por ejemplo, YouTube, Twitter) del frontend y de la API REST."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:65
+msgid "Prevent embed-related scripts from loading."
+msgstr "Evitar la carga de scripts relacionados con incrustaciones."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:66
+msgid "Enhance GDPR compliance by reducing third-party tracking and cookie usage."
+msgstr "Mejorar el cumplimiento del RGPD reduciendo el seguimiento y uso de cookies por terceros."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:67
+msgid "Boost performance metrics and PageSpeed Insights scores by reducing external resource loading."
+msgstr "Mejorar las métricas de rendimiento y las puntuaciones en PageSpeed Insights reduciendo la carga de recursos externos."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:74
+msgid "jQuery Migrate Settings"
+msgstr "Configuración de jQuery Migrate"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:78
+msgid "Improve site performance by removing outdated compatibility scripts."
+msgstr "Mejorar el rendimiento del sitio eliminando scripts de compatibilidad obsoletos."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:79
+msgid "Reduce JavaScript loading time and improve PageSpeed Insights scores."
+msgstr "Reducir el tiempo de carga de JavaScript y mejorar las puntuaciones en PageSpeed Insights."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:86
+msgid "XML-RPC Settings"
+msgstr "Configuración de XML-RPC"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:90
+msgid "Prevent external XML-RPC requests and reduce the risk of DDoS and brute-force attacks."
+msgstr "Evitar solicitudes externas de XML-RPC y reducir el riesgo de ataques DDoS y de fuerza bruta."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:91
+msgid "Improve site security by closing an often unused attack vector."
+msgstr "Mejorar la seguridad del sitio cerrando un vector de ataque frecuentemente no utilizado."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:97
+msgid "Custom Inline Script"
+msgstr "Script personalizado en línea"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:98
+msgid "Add custom JavaScript code that will be included in the footer of your site's frontend."
+msgstr "Añade código JavaScript personalizado que se incluirá en el pie de página del frontend de tu sitio."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:105
+msgid "Enter custom JavaScript here..."
+msgstr "Introduce JavaScript personalizado aquí..."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:114
+msgid "Reset to default"
+msgstr "Restablecer valores predeterminados"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:143
+msgid "Disable"
+msgstr "Desactivar"
+
+#: includes/tabs/class-atweaks-tab-scripts.php:180
+msgid "All script settings have been reset."
+msgstr "Toda la configuración de scripts ha sido restablecida."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:196
+msgid "Custom script has been successfully saved."
+msgstr "El script personalizado se ha guardado correctamente."
+
+#: includes/tabs/class-atweaks-tab-scripts.php:200
+msgid "Custom script has been successfully cleared."
+msgstr "El script personalizado se ha borrado correctamente."

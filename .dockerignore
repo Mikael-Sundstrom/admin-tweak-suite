@@ -1,0 +1,16 @@
+# Ignorera versionshanteringsfiler och utvecklingsfiler
+.git/
+.github/
+.vscode/
+github/
+
+# Ignorera Docker-konfigurationsfiler
+.dockerignore
+docker-compose.yml
+
+# Ignorera projektfiler som inte behövs i containern
+.gitignore
+README.md
+
+# Ignorera WordPress-mapp om den inte behövs i containern
+wp-content/

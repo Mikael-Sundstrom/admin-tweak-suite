@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Git Add",
+			"type": "shell",
+			"command": "git add .",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Git Commit",
+			"type": "shell",
+			"command": "git commit -m 'Update'",
+			"group": "build",
+			"problemMatcher": [],
+			"dependsOn": "Git Add"
+		},
+		{
+			"label": "Git Push",
+			"type": "shell",
+			"command": "git push origin main",
+			"group": "build",
+			"problemMatcher": [],
+			"dependsOn": "Git Commit"
+		},
+		{
+			"label": "Docker Compose Up",
+			"type": "shell",
+			"command": "docker-compose up -d",
+			"group": "build",
+			"problemMatcher": []
+		},
+		{
+			"label": "Docker Compose Down",
+			"type": "shell",
+			"command": "docker-compose down",
+			"group": "build",
+			"problemMatcher": []
+		}
+	]
+}

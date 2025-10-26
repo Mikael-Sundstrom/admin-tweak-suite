@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<ruleset name="Admin Tweak Suite">
+  <!-- Välj en: WordPress (allt) eller WordPress-Core + WordPress-Docs + WordPress-Extra -->
+  <rule ref="WordPress"/>
+
+  <!-- Rekommenderade tillägg -->
+  <config name="testVersion" value="7.4-"/>
+  <rule ref="PHPCompatibilityWP"/>
+  <rule ref="VariableAnalysis"/>
+
+  <!-- Ignorera mappar -->
+  <exclude-pattern>vendor/*</exclude-pattern>
+  <exclude-pattern>assets/*</exclude-pattern>
+  <file>./</file>
+</ruleset>

@@ -1,0 +1,91 @@
+{
+	"name": "mikael-sundstrom/admin-tweak-suite",
+	"type": "wordpress-plugin",
+	"autoload": {
+		"psr-4": {
+			"AdminTweakSuite\\": "includes/"
+		}
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.10",
+		"wp-coding-standards/wpcs": "^3.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"php-stubs/wordpress-stubs": "^6.8",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"sirbrillig/phpcs-variable-analysis": "^2.12"
+	},
+	"scripts": {
+		"i18n:pot": "wp i18n make-pot . languages/admin-tweak-suite.pot --exclude=vendor",
+		"i18n:init-sv_SE": "test -f languages/admin-tweak-suite-sv_SE.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-sv_SE.po",
+		"i18n:init-de_DE": "test -f languages/admin-tweak-suite-de_DE.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-de_DE.po",
+		"i18n:init-fr_FR": "test -f languages/admin-tweak-suite-fr_FR.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-fr_FR.po",
+		"i18n:init-es_ES": "test -f languages/admin-tweak-suite-es_ES.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-es_ES.po",
+		"i18n:init-hi_IN": "test -f languages/admin-tweak-suite-hi_IN.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-hi_IN.po",
+		"i18n:init-it_IT": "test -f languages/admin-tweak-suite-it_IT.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-it_IT.po",
+		"i18n:init-nl_NL": "test -f languages/admin-tweak-suite-nl_NL.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-nl_NL.po",
+		"i18n:init-pt_BR": "test -f languages/admin-tweak-suite-pt_BR.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-pt_BR.po",
+		"i18n:init-zh_CN": "test -f languages/admin-tweak-suite-zh_CN.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-zh_CN.po",
+		"i18n:init-zh_TW": "test -f languages/admin-tweak-suite-zh_TW.po || cp languages/admin-tweak-suite.pot languages/admin-tweak-suite-zh_TW.po",
+		"i18n:merge-sv_SE": "msgmerge --update languages/admin-tweak-suite-sv_SE.po languages/admin-tweak-suite.pot",
+		"i18n:merge-de_DE": "msgmerge --update languages/admin-tweak-suite-de_DE.po languages/admin-tweak-suite.pot",
+		"i18n:merge-fr_FR": "msgmerge --update languages/admin-tweak-suite-fr_FR.po languages/admin-tweak-suite.pot",
+		"i18n:merge-es_ES": "msgmerge --update languages/admin-tweak-suite-es_ES.po languages/admin-tweak-suite.pot",
+		"i18n:merge-hi_IN": "msgmerge --update languages/admin-tweak-suite-hi_IN.po languages/admin-tweak-suite.pot",
+		"i18n:merge-it_IT": "msgmerge --update languages/admin-tweak-suite-it_IT.po languages/admin-tweak-suite.pot",
+		"i18n:merge-nl_NL": "msgmerge --update languages/admin-tweak-suite-nl_NL.po languages/admin-tweak-suite.pot",
+		"i18n:merge-pt_BR": "msgmerge --update languages/admin-tweak-suite-pt_BR.po languages/admin-tweak-suite.pot",
+		"i18n:merge-zh_CN": "msgmerge --update languages/admin-tweak-suite-zh_CN.po languages/admin-tweak-suite.pot",
+		"i18n:merge-zh_TW": "msgmerge --update languages/admin-tweak-suite-zh_TW.po languages/admin-tweak-suite.pot",
+		"i18n:mo-sv_SE": "msgfmt languages/admin-tweak-suite-sv_SE.po -o languages/admin-tweak-suite-sv_SE.mo",
+		"i18n:mo-de_DE": "msgfmt languages/admin-tweak-suite-de_DE.po -o languages/admin-tweak-suite-de_DE.mo",
+		"i18n:mo-fr_FR": "msgfmt languages/admin-tweak-suite-fr_FR.po -o languages/admin-tweak-suite-fr_FR.mo",
+		"i18n:mo-es_ES": "msgfmt languages/admin-tweak-suite-es_ES.po -o languages/admin-tweak-suite-es_ES.mo",
+		"i18n:mo-hi_IN": "msgfmt languages/admin-tweak-suite-hi_IN.po -o languages/admin-tweak-suite-hi_IN.mo",
+		"i18n:mo-it_IT": "msgfmt languages/admin-tweak-suite-it_IT.po -o languages/admin-tweak-suite-it_IT.mo",
+		"i18n:mo-nl_NL": "msgfmt languages/admin-tweak-suite-nl_NL.po -o languages/admin-tweak-suite-nl_NL.mo",
+		"i18n:mo-pt_BR": "msgfmt languages/admin-tweak-suite-pt_BR.po -o languages/admin-tweak-suite-pt_BR.mo",
+		"i18n:mo-zh_CN": "msgfmt languages/admin-tweak-suite-zh_CN.po -o languages/admin-tweak-suite-zh_CN.mo",
+		"i18n:mo-zh_TW": "msgfmt languages/admin-tweak-suite-zh_TW.po -o languages/admin-tweak-suite-zh_TW.mo",
+		"i18n:all": [
+			"@i18n:pot",
+			"@i18n:init-sv_SE",
+			"@i18n:init-de_DE",
+			"@i18n:init-fr_FR",
+			"@i18n:init-es_ES",
+			"@i18n:init-hi_IN",
+			"@i18n:init-it_IT",
+			"@i18n:init-nl_NL",
+			"@i18n:init-pt_BR",
+			"@i18n:init-zh_CN",
+			"@i18n:init-zh_TW",
+			"@i18n:merge-sv_SE",
+			"@i18n:merge-de_DE",
+			"@i18n:merge-fr_FR",
+			"@i18n:merge-es_ES",
+			"@i18n:merge-hi_IN",
+			"@i18n:merge-it_IT",
+			"@i18n:merge-nl_NL",
+			"@i18n:merge-pt_BR",
+			"@i18n:merge-zh_CN",
+			"@i18n:merge-zh_TW",
+			"@i18n:mo-sv_SE",
+			"@i18n:mo-de_DE",
+			"@i18n:mo-fr_FR",
+			"@i18n:mo-es_ES",
+			"@i18n:mo-hi_IN",
+			"@i18n:mo-it_IT",
+			"@i18n:mo-nl_NL",
+			"@i18n:mo-pt_BR",
+			"@i18n:mo-zh_CN",
+			"@i18n:mo-zh_TW"
+		],
+		"create-zip": "wp dist-archive . ./dist/admin-tweak-suite.zip --format=zip",
+		"cs": "phpcs --standard=WordPress --extensions=php --ignore=vendor .",
+		"cbf": "phpcbf --standard=WordPress --extensions=php --ignore=vendor ."
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
